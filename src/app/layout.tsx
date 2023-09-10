@@ -1,5 +1,7 @@
 import { type Metadata } from "next";
 
+import { Footer } from "~/components/layout/footer";
+import { Header } from "~/components/layout/header";
 import { Providers } from "~/components/providers";
 import { fontSans } from "~/config/fonts";
 import { siteConfig } from "~/config/site";
@@ -22,7 +24,13 @@ export default function RootLayout({ children }: WithChildren) {
     <html lang="en" suppressHydrationWarning>
       <head />
       <body style={fontSans.style}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className="relative flex min-h-screen flex-col">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );

@@ -3,5 +3,14 @@
   "version": "0.2",
   "language": "en,pt,pt-BR",
   "ignorePaths": ["dist", "out", "build", ".next"],
-  "words": ["commitlint", "tailwindcss", "clsx", "tanstack", "nextjs", "latin"]
+  "words": [
+    "fellipeutaka",
+    "shadcn",
+    "clsx",
+    "commitlint",
+    "latin",
+    "nextjs",
+    "tailwindcss",
+    "tanstack"
+  ]
 }

@@ -1,5 +1,3 @@
-import { type Metadata } from "next";
-
 import { Footer } from "~/components/layout/footer";
 import { Header } from "~/components/layout/header";
 import { Providers } from "~/components/providers";
@@ -7,7 +5,7 @@ import { fontSans } from "~/config/fonts";
 import { siteConfig } from "~/config/site";
 import "~/styles/globals.css";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,

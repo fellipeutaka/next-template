@@ -1,28 +1,23 @@
-"use client";
+import Link from "next/link";
 
-import { useQuery } from "@tanstack/react-query";
+import { Button } from "~/components/ui/button";
 
-import { getPosts } from "~/services/posts";
+import { PostList } from "./post-list";
 
-export default function Posts() {
-  const { data } = useQuery({
-    queryKey: ["posts"],
-    queryFn({ signal }) {
-      return getPosts({ signal, cache: "no-cache" });
-    },
-  });
+export const metadata = {
+  title: "Posts",
+};
 
+export default function Page() {
   return (
-    <main className="container py-6">
-      <h1 className="text-5xl font-semibold">Posts</h1>
-      <ul className="mt-6 grid justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {data?.map((post) => (
-          <li className="max-w-xs rounded-md border p-6" key={post.id}>
-            <h2 className="text-lg font-medium">{post.title}</h2>
-            <p className="text-sm text-muted-foreground">{post.body}</p>
-          </li>
-        ))}
-      </ul>
+    <main className="container flex grow flex-col py-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-5xl font-semibold">Posts</h1>
+        <Button asChild>
+          <Link href="/posts/new">Create a new post</Link>
+        </Button>
+      </div>
+      <PostList />
     </main>
   );
 }

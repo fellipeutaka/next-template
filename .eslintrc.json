@@ -28,5 +28,10 @@
         }
       }
     ]
+  },
+  "settings": {
+    "tailwindcss": {
+      "callees": ["twMerge", "clsx", "tv", "cn"]
+    }
   }
 }

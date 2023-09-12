@@ -7,4 +7,14 @@ export const siteConfig = {
     github: "https://github.com/fellipeutaka/next-template",
     twitter: "https://twitter.com/fellipeutaka",
   },
+  navItems: [
+    {
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Posts",
+      href: "/posts",
+    },
+  ],
 };

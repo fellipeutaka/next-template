@@ -1,4 +1,5 @@
 import ky, { type Options } from "ky";
+import { z } from "zod";
 
 import { env } from "~/constants/env.mjs";
 
@@ -14,6 +15,15 @@ const api = ky.create({
 });
 
 export async function getPosts(options?: Options) {
-  await new Promise((resolve) => setTimeout(resolve, 2500));
   return await api.get("posts", options).json<Post[]>();
+}
+
+export const createPostSchema = z.object({
+  title: z.string().min(1),
+  body: z.string().min(1),
+});
+
+export async function createNewPost(data: OmitKeys<Post, "id" | "userId">) {
+  console.log(data);
+  await new Promise((resolve) => setTimeout(resolve, Math.random() * 1000));
 }

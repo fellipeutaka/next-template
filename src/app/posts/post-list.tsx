@@ -8,7 +8,7 @@ export function PostList() {
   const { data } = useQuery({
     queryKey: ["posts"],
     queryFn({ signal }) {
-      return getPosts({ signal, cache: "no-cache" });
+      return getPosts({ signal });
     },
   });
 

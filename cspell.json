@@ -4,15 +4,16 @@
   "language": "en,pt,pt-BR",
   "ignorePaths": ["dist", "out", "build", ".next"],
   "words": [
+    "fellipeutaka",
+    "nextjs",
     "callees",
     "clsx",
     "commitlint",
-    "fellipeutaka",
     "hookform",
     "latin",
-    "nextjs",
     "shadcn",
     "tailwindcss",
-    "tanstack"
+    "tanstack",
+    "autodocs"
   ]
 }
